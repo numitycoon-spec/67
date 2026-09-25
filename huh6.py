@@ -1,9 +1,9 @@
-power = int(input())
-key = input()
+power = int(input()) #if input 50
+key = input() #if input GOLD
 
 if power >= 50:
     if key == "gold":
-        print("teasure")
+        print("treasure")
     else:
         print("need key")
         

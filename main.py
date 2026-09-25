@@ -1,8 +1,8 @@
-from scores import calculate_average
-from report import print_report
+from calculations import calculate_total
+from receipt import print_receipt
 
-scores = [70, 80, 90]
+prices = [20, 35, 15]
 
-average = calculate_average(scores)
+total = calculate_total(prices)
 
-print_report("Mali", average)
+print_receipt("Guide", total)

@@ -1,5 +1,5 @@
 hammer = int(input())
-sword = float(input())
+sword = int(input())
 shield = int(input())
 
 print(hammer <= sword + shield)
