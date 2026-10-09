@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111512">
+  <meta name="description" content="Field Supply — tactical strategy games for the next campaign.">
+  <title>Field Supply — Strategy Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#games">Skip to games</a>
+  <div class="announcement"><span class="status-dot"></span> OPERATION: WEEKEND — free delivery on orders over $50</div>
+  <header class="header">
+    <a class="brand" href="#top" aria-label="Field Supply home"><span class="brand-mark">FS</span><span>FIELD<span class="brand-light">SUPPLY</span><small>THE STRATEGY GAME DEPOT</small></span></a>
+    <nav aria-label="Main navigation"><a href="#games">Games</a><a href="#about">Our mission</a><a href="#footer">Support</a></nav>
+    <button class="cart-button" id="cart-open" aria-label="Open shopping cart">CART <span id="cart-count">0</span> <span aria-hidden="true">↗</span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow"><span>01</span> THE FRONT LINE STARTS HERE</p>
+        <h1>PLAN YOUR<br><em>NEXT</em> MOVE.</h1>
+        <p class="hero-intro">Strategy. Survival. Squad tactics. Find your next campaign in our hand-picked collection of war games.</p>
+        <a class="primary-button" href="#games">BROWSE THE ARMORY <span>↓</span></a>
+        <div class="hero-note"><span class="crosshair">⊕</span> CURATED FOR COMMANDERS, NOT COLLECTORS</div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Dramatic olive-toned mountain battlefield at dusk">
+        <div class="art-grid"></div><div class="art-tag">FIELD REPORT <span>NO. 024</span></div>
+        <div class="art-caption"><span>THEATER 04 — NORTHERN RANGE</span><b>EVERY CAMPAIGN<br>HAS A TURNING POINT.</b></div>
+        <div class="art-coordinates">48°51'24.0"N<br>02°21'08.0"E</div>
+      </div>
+      <div class="hero-index">FS<span> / </span>EST. 2024</div>
+    </section>
+
+    <section class="ticker" aria-label="Store highlights"><div>TACTICAL RPGs <i>✳</i> REAL-TIME STRATEGY <i>✳</i> SURVIVAL SIMS <i>✳</i> NEW DEPLOYMENTS EVERY WEEK <i>✳</i> TACTICAL RPGs <i>✳</i> REAL-TIME STRATEGY <i>✳</i></div></section>
+
+    <section class="catalog" id="games">
+      <div class="section-heading"><div><p class="eyebrow"><span>02</span> SHOP BY YOUR NEXT MISSION</p><h2>THE <em>ARMORY</em></h2></div><p class="catalog-count"><span id="result-count">06</span> TITLES<br>READY TO DEPLOY</p></div>
+      <div class="toolbar"><div class="filters" role="group" aria-label="Filter games by genre"><button class="filter active" data-filter="all" aria-pressed="true">ALL GAMES <span>06</span></button><button class="filter" data-filter="strategy" aria-pressed="false">STRATEGY</button><button class="filter" data-filter="tactical" aria-pressed="false">TACTICAL</button><button class="filter" data-filter="survival" aria-pressed="false">SURVIVAL</button></div><label class="sort-label">SORT BY <select id="sort"><option value="featured">FEATURED</option><option value="low">PRICE: LOW TO HIGH</option><option value="high">PRICE: HIGH TO LOW</option></select></label></div>
+      <div class="game-grid" id="game-grid" aria-live="polite"></div>
+      <div class="empty-results" id="empty-results" hidden>No games in this sector. Try another filter.</div>
+    </section>
+    <section class="mission" id="about"><div class="mission-mark">✳</div><div><p class="eyebrow"><span>03</span> OUR MISSION</p><h2>GOOD GAMES.<br><em>NO GIMMICKS.</em></h2></div><p>We play the campaigns, read the field reports, and stock games worth your time. Independent picks for players who like a plan—and a little chaos.</p><a href="#games" class="text-link">FIND YOUR NEXT CAMPAIGN ↗</a></section>
+  </main>
+  <footer id="footer"><a class="brand footer-brand" href="#top"><span class="brand-mark">FS</span><span>FIELD<span class="brand-light">SUPPLY</span><small>THE STRATEGY GAME DEPOT</small></span></a><p>Built for the long game. © 2026 FIELD SUPPLY</p><a href="mailto:hello@fieldsupply.example">CONTACT HQ ↗</a></footer>
+
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true" inert>
+    <div class="drawer-head"><div><p class="eyebrow"><span>FS</span> YOUR LOADOUT</p><h2 id="cart-title">FIELD <em>PACK</em></h2></div><button class="icon-button" id="cart-close" aria-label="Close shopping cart">×</button></div>
+    <div id="cart-items" class="cart-items"></div><div id="cart-empty" class="cart-empty"><span>⊕</span><p>Your field pack is empty.</p><small>Pick a game to get the operation underway.</small></div>
+    <div class="cart-footer"><div><span>SUBTOTAL</span><strong id="subtotal">$0.00</strong></div><button class="primary-button checkout" id="checkout">PROCEED TO CHECKOUT <span>↗</span></button><p>Demo shop — checkout is not connected yet.</p></div>
+  </aside>
+  <section class="music-dock" aria-label="Background music">
+    <div class="music-copy"><span class="music-note" aria-hidden="true">♫</span><div><strong>RIVER FLOWS IN YOU</strong><small>YIRUMA · OFFICIAL VIDEO</small></div></div>
+    <button class="music-toggle" id="music-toggle" aria-expanded="false" aria-controls="music-player">▶ <span>PLAY MUSIC</span></button>
+    <a class="music-external" href="https://www.youtube.com/watch?v=fiBvOKmuWKg" target="_blank" rel="noopener noreferrer">OPEN ON YOUTUBE ↗</a>
+    <div class="music-player" id="music-player" hidden></div>
+  </section>
+</body>
+</html>
